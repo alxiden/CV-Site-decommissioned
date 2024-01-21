@@ -203,7 +203,7 @@ function homepage_Set() {
 //Plays animation when page loads
 function boot(){
     var id = 'cmd-txt';
-        const input = 'Welcome, I am Dan. I am a Linux enthusiast and a bit of a nerd. I have created this website to show off my skills and projects, I hope you enjoy your stay.';
+        const input = 'Welcome, I am Dan. Please enjoy my site!';
         document.getElementById(id).style.position = 'inherit';
         document.getElementById(id).style.zIndex = 0;
         anima(input, '.cmd');
@@ -212,13 +212,13 @@ function boot(){
         setTimeout(function(){
             document.getElementById('termial-line-2').style.zIndex = 0;
             document.getElementById('termial-line-2').style.visibility = 'inherit';
-        },17000)
+        },5000)
         setTimeout(function(){
             document.getElementById('cmd-txt-2').style.position = 'inherit';
             document.getElementById('cmd-txt-2').style.zIndex = 0;
             const input = 'clear';
             anima(input, '.cmd2');
-        },19000)
+        },7000)
         setTimeout(function(){
             document.getElementById('termial-line-2').style.zIndex = -2;
             document.getElementById('cmd-txt').innerHTML = '';
@@ -233,12 +233,12 @@ function boot(){
             document.getElementById('cat-info').style.visibility = 'hidden';
             document.getElementById('reverse').style.visibility = 'hidden';
             document.getElementById('help-table').style.visibility = 'hidden';
-        },22000)
+        },8000)
         setTimeout(function(){
             document.getElementById('cmd-txt').innerHTML = '';
             document.getElementById('cursor1').style.position = 'inherit';
             document.getElementById('cursor1').style.zIndex = 0;
-        },24000)
+        },9000)
 }
 
 // Clear current page
@@ -274,6 +274,8 @@ function clearPage() {
             document.getElementById('cat-info').style.visibility = 'hidden';
             document.getElementById('reverse').style.visibility = 'hidden';
             document.getElementById('help-table').style.visibility = 'hidden';
+            document.getElementById('goa-info').style.position = 'absolute';
+            document.getElementById('goa-info').style.visibility = 'hidden';
             document.getElementById('cmd-txt-2').innerHTML = '';
             //console.log('ooh look at you clearing the screen, must think your so special')
             return currentpage = "home"
@@ -441,5 +443,6 @@ function goaPage(){
             document.getElementById('termial-line-2').style.visibility = 'inherit';
             document.getElementById('cursor1').style.position = 'absolute';
             document.getElementById('cursor1').style.zIndex = -2;
+            return currentpage = 'goa'
         },2200);
 }

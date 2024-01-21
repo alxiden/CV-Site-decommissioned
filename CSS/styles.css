@@ -51,12 +51,15 @@ a:hover{
     width: auto;
     color: white;
     overflow: hidden;
-    white-space: wrap;
+    white-space: normal;
     font-weight: 600;
     display: inline;
     padding: 0;
     position: inherit;
     z-index: 0;
+    word-break: break-word;
+    text-overflow: ellipsis;
+    
 }
 
 .cmd2{
