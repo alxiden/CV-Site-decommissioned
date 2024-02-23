@@ -36,6 +36,7 @@ document.getElementById('Sharepoint').addEventListener('click',function(e){Model
 document.getElementById('Helpdesk').addEventListener('click',function(e){ModelText('Helpdesk')})
 document.getElementById('Switch').addEventListener('click',function(e){ModelText('Switch')})
 document.getElementById('Wifi').addEventListener('click',function(e){ModelText('Wifi')})
+document.getElementById('FIDO').addEventListener('click',function(e){ModelText('FIDO')})
 
 
 //clear man screen
@@ -69,16 +70,16 @@ function ModelText(project){
     // console.log(project)
     if(modelTxt === 'Intune'){
         document.getElementById(title).innerHTML = 'Intune Rollout';
-        document.getElementById(body).innerHTML = 'Enrolling 130 PC, 30 laptops and 27 Moible phone endpoints into Microsoft Intunes endpoint manager. Alongside setting up update rings, Antivirus, Firewall and Attack surface reduction rules.'
+        document.getElementById(body).innerHTML = 'Enrolling 130 PC, 30 laptops and 27 Moible phone endpoints into Microsoft Intunes endpoint manager. Alongside setting up update rings, Antivirus, Firewall and Attack Surface Reduction rules.'
     }else if (modelTxt === 'TeamsBot') {
         document.getElementById(title).innerHTML = 'Teams Helpdesk Bot';
         document.getElementById(body).innerHTML = 'Created a Teams Helpdesk bot using Power Virtual Agents to help support the users quicker and reduce my simple tickets so I can focus on the more complex issues. This included automatic emails and updates using power automate and links to Sharepoint.'
     }else if (modelTxt === 'NewStarter'){
         document.getElementById(title).innerHTML = 'New Starter Automation';
-        document.getElementById(body).innerHTML = 'Using Power Automate to automate the new starter process for Kings Court Trust and Title Research in one flow. This cut the setup time for new starters from 2 hours to about 15 minutes depending on the specific user and removed a large portion of human error saving yet more time on bug fixes.'
+        document.getElementById(body).innerHTML = 'Using Power Automate to automate the new starter process for Kings Court Trust and Title Research in one flow. This cut the setup time for new starters from 2 hours to about 15 minutes depending on the specific user and removed a large portion of human error.'
     }else if (modelTxt === 'Sharepoint'){
         document.getElementById(title).innerHTML = 'Sharepoint Knowledgebase Creation';
-        document.getElementById(body).innerHTML = 'I migrated the old Confluence knowledgebase that was being hosted on an Azure server into Microsoft SharePoint saving the company £150 a month. As part of this I also added features for user engagement (Countdowns, twitter feeds and the like), a site for IT support creating a more centralised location for IT help and collaboration tools to help internal teams work together more efficiently'
+        document.getElementById(body).innerHTML = 'I migrated the old Confluence knowledgebase that was being hosted on an Azure server into Microsoft SharePoint. As part of this I also added features for user engagement (Countdowns, twitter feeds and the like), a site for IT support creating a more centralised location for IT help and collaboration tools to help internal teams work together more efficiently'
     }else if (modelTxt === 'Helpdesk') {
         document.getElementById(title).innerHTML = 'Internal Helpdesk Ticket System';
         document.getElementById(body).innerHTML = 'I made a internal Helpdesk Ticket System to help the IT team organise jobs and ensure all issues were logged and able to reference back to if needed. This utilised Power Automate and Microsoft Planner as they both came with the companies 365 licence. This resulted in a huge improvement in efficiency and user satisfaction with the department.'
@@ -89,7 +90,11 @@ function ModelText(project){
     }
     else if (modelTxt === 'Wifi') {
         document.getElementById(title).innerHTML = 'Wifi Network';
-        document.getElementById(body).innerHTML = 'Replaces the old 1 AP WIFI network with a new 3 AP smart mesh network saving the company money on licence costs while increasing the strength and reliablity of the Office WIFI.'
+        document.getElementById(body).innerHTML = 'Replaces the old 1 AP WIFI network with a new 3 AP smart mesh network saving the company money on licence costs while increasing the strength and reliablity of the Office WIFI. Also setup a segragated guest network for visitors to the office.'
+    }
+    else if (modelTxt === 'FIDO') {
+        document.getElementById(title).innerHTML = 'FIDO2 Security Keys';
+        document.getElementById(body).innerHTML = 'I created my own FIDO2 security keys using a Raspberry Pi Pico. Then set security keys up for the IT team to use for 2FA on the Azure portal and other services. I love the keys so much I made one for my personal accounts as well.'    
     }
 }
 
