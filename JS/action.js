@@ -36,6 +36,7 @@ document.getElementById('Sharepoint').addEventListener('click',function(e){Model
 document.getElementById('Helpdesk').addEventListener('click',function(e){ModelText('Helpdesk')})
 document.getElementById('Switch').addEventListener('click',function(e){ModelText('Switch')})
 document.getElementById('Wifi').addEventListener('click',function(e){ModelText('Wifi')})
+document.getElementById('Data').addEventListener('click',function(e){ModelText('Data')})
 
 
 //clear man screen
@@ -90,6 +91,10 @@ function ModelText(project){
     else if (modelTxt === 'Wifi') {
         document.getElementById(title).innerHTML = 'Wifi Network';
         document.getElementById(body).innerHTML = 'Replaces the old 1 AP WIFI network with a new 3 AP smart mesh network saving the company money on licence costs while increasing the strength and reliablity of the Office WIFI.'
+    }
+    else if (modelTxt === 'Data') {
+        document.getElementById(title).innerHTML = 'Data Labeling';
+        document.getElementById(body).innerHTML = 'Using Microsoft Perview added data lables for emails and documents to control the flow of sensitive information.'
     }
 }
 
