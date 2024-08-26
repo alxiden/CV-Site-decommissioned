@@ -37,6 +37,9 @@ document.getElementById('Helpdesk').addEventListener('click',function(e){ModelTe
 document.getElementById('Switch').addEventListener('click',function(e){ModelText('Switch')})
 document.getElementById('Wifi').addEventListener('click',function(e){ModelText('Wifi')})
 document.getElementById('Data').addEventListener('click',function(e){ModelText('Data')})
+document.getElementById('Phishing').addEventListener('click',function(e){ModelText('Phishing')})
+document.getElementById('Training').addEventListener('click',function(e){ModelText('Training')})
+document.getElementById('Audit').addEventListener('click',function(e){ModelText('Audit')})
 
 
 //clear man screen
@@ -95,6 +98,18 @@ function ModelText(project){
     else if (modelTxt === 'Data') {
         document.getElementById(title).innerHTML = 'Data Labeling';
         document.getElementById(body).innerHTML = 'Using Microsoft Perview added data lables for emails and documents to control the flow of sensitive information.'
+    }
+    else if (modelTxt === 'Phishing') {
+        document.getElementById(title).innerHTML = 'Phishing Campaign';
+        document.getElementById(body).innerHTML = 'Created a Phishing platform using Gophish and an Azure VM to test the users awareness of Phishing emails and how to spot them.'
+    }
+    else if (modelTxt === 'Training') {
+        document.getElementById(title).innerHTML = 'User Training';
+        document.getElementById(body).innerHTML = 'Created and delivered training sessions for the IT team and the wider company on core cyber security threats. This included Phishing, Password security and the importance of keeping software up to date, split up into 2 minute videos to help with information retention and reduce downtime.'
+    }
+    else if (modelTxt === 'Audit') {
+        document.getElementById(title).innerHTML = 'Cyber Assessment Framework Audit';
+        document.getElementById(body).innerHTML = 'Using the Cyber Assessment Framework I audited the Kings Court Trust IT systems and created a report on the findings and recommendations for the company to improve their security posture.'
     }
 }
 
@@ -330,6 +345,7 @@ function manPage() {
         const input = 'man d.ward/Skills';
         anima(input, '.cmd');
         setTimeout(function(){
+            document.getElementById('find-info').style.visibility = 'hidden';
             document.getElementById('row1').style.visibility = 'hidden';
             document.getElementById('row2').style.visibility = 'hidden';
             document.getElementById('man-info').style.position = 'inherit';
